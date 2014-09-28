@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Holmes</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		function ask(){
+			var question = $('#question').val();
+			$.post('/question?q='+question,function (data,status) {
+				if(data.answer){
+					$('p').text(data.answer);
+				}
+			})
+		}
+		</script>
+		<style type="text/css">
+			.mainBackground{
+				background:url(/images/sherlock.jpg);
+				background-size:cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-header text-center" >
+ 			<h1>Welcome to Holmes<br/><small>by Sundeep and Dave</small></h1>
+		</div>
+		<div class="jumbotron text-center mainBackground" >
+			<h2 style="color:white;">Question???</h2>
+			<br/>
+			<input type="text" id="question" style="width:30%;"placeholder="Enter Question Here..."></input>
+			<br />
+			<br />
+			<button onclick='ask()' class="btn btn-primary btn-lg">Ask!</button>
+			<br />
+			<br />
+			<h2 style="color:white;">Get your answer</h2>
+			<p style="color:white;">Your answer will appear here...</p>
+		</div>
+	</body>
+</html>

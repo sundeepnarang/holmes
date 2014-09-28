@@ -1,0 +1,24 @@
+{
+  "name": "Holmes"
+  ,"version": "0.00.00"
+  ,"private": true
+  ,"dependencies": {
+    "express" : "~3.4.8"
+  }
+  ,"repository" :
+  { 
+    "type" : "git"
+    ,"url" : "https://github.com/evolvingtechcorp/ServerS.git"
+  }
+  ,"contributors": [{
+      "name": "Sundeep Narang"
+      ,"email": "sundeep.narang@nyu.edu"
+      ,"url":"https://www.linkedin.com/in/sundeepnarang"
+    },
+    {
+      "name": "David Hung"
+      ,"email": "daveh@nyu.edu"
+      ,"url":"https://www.linkedin.com/pub/david-hung/21/226/119"
+    }
+    ]
+}
